@@ -1,18 +1,18 @@
 "use strict";
 
-var activeClass = "active";
-var btnNext = document.querySelector('.js-next');
-var btnPrev = document.querySelector('.js-prev');
-var slide = document.querySelectorAll('.js-slider .js-slider-item');
-var i = 0;
+const activeClass = "active";
+const btnNext = document.querySelector('.js-next');
+const btnPrev = document.querySelector('.js-prev');
+const slide = document.querySelectorAll('.js-slider .js-slider-item');
+const i = 0;
 
 // For Touch Support
-var touchstartX = 0;
-var touchstartY = 0;
-var touchendX = 0;
-var touchendY = 0;
+const touchstartX = 0;
+const touchstartY = 0;
+const touchendX = 0;
+const touchendY = 0;
 
-var touchZone = document.querySelector('.js-slider');
+const touchZone = document.querySelector('.js-slider');
 
 touchZone.addEventListener('touchstart', function(event) {
   touchstartX = event.changedTouches[0].screenY;
