@@ -26,7 +26,7 @@ touchZone.addEventListener('touchend', function(event) {
 }, false);
 
 // Prevent fast Clicking
-function throttle(fn, threshhold, scope) {
+const throttle = (fn, threshhold, scope) => {
   threshhold || (threshhold = 250);
   var last,
       deferTimer;
@@ -49,7 +49,7 @@ function throttle(fn, threshhold, scope) {
   };
 }
 
-function slideActions(ac) {
+const slideActions = (ac) => {
   slide[i].classList.remove(activeClass);
 
   if (ac === "next"){
@@ -77,7 +77,7 @@ btnNext.onclick = throttle(function() {
   slideActions("next");
 }, 500);
 
-function handleGesure() {
+const handleGesure = () => {
   if (touchendX < touchstartX) {
     slideActions("prev");
   }
